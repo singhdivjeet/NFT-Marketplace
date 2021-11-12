@@ -3,7 +3,7 @@ function Header() {
 		<header class="h-24 sm:h-32 flex items-center z-30 w-full">
 			<div class="container mx-auto px-6 flex items-center justify-between">
 				<div class="uppercase text-gray-800 dark:text-white font-black text-3xl">
-					NFT MarketPlace
+					<a href="/"> NFT MarketPlace </a>
 				</div>
 				<div class="flex items-center">
 					<nav class="font-sen text-gray-800 dark:text-white uppercase text-lg lg:flex items-center hidden">
@@ -26,7 +26,7 @@ function Header() {
 							Contact
 						</a>
 						<a
-							href="#"
+							href="/teams"
 							class="py-2 px-6 flex rounded-lg hover:bg-pink-600 hover:text-white"
 						>
 							Team

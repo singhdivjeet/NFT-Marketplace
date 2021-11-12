@@ -15,13 +15,13 @@ export default function Create() {
 					</div>
 					<div className="mt-5 md:mt-0 md:col-span-2">
 						<form action="#" method="POST">
-							<div className="shadow-lg sm:rounded-md sm:overflow-hidden">
-								<div className="px-4 py-5 bg-white space-y-6 sm:p-6">
+							<div className="bg-gray-50 sm:rounded-md sm:overflow-hidden">
+								<div className="px-4 py-5  space-y-6 sm:p-6">
 									<div className="flex">
-										<div className="w-1/2  px-4 py-5 bg-white sm:p-6">
+										<div className="w-1/2 items-center flex sm:p-6">
 											<label
 												htmlFor="first-name"
-												className="block text-sm font-medium text-gray-700"
+												className="block w-1/4 text-sm font-medium text-gray-700"
 											>
 												First name
 											</label>
@@ -30,14 +30,14 @@ export default function Create() {
 												name="first-name"
 												id="first-name"
 												autoComplete="given-name"
-												className="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
+												className="mt-1 h-8 focus:ring-indigo-500 w-3/4 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
 											/>
 										</div>
 
-										<div className="w-1/2  px-4 py-5 bg-white sm:p-6">
+										<div className="w-1/2  items-center  flex sm:p-6">
 											<label
 												htmlFor="last-name"
-												className="block text-sm font-medium text-gray-700"
+												className="block text-sm w-1/4 font-medium text-gray-700"
 											>
 												Last name
 											</label>
@@ -46,7 +46,7 @@ export default function Create() {
 												name="last-name"
 												id="last-name"
 												autoComplete="family-name"
-												className="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
+												className="mt-1 w-3/4 h-8 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
 											/>
 										</div>
 									</div>
@@ -76,7 +76,7 @@ export default function Create() {
 										<label className="block text-sm font-medium text-gray-700">
 											Upload Art
 										</label>
-										<div className="mt-1 flex justify-center px-6 pt-5 pb-6 border-2 border-gray-300 border-dashed rounded-md">
+										<div className="mt-1 bg-white flex justify-center px-6 pt-5 pb-6 border-2 border-gray-300 border-dashed rounded-md">
 											<div className="space-y-1 text-center">
 												<svg
 													className="mx-auto h-12 w-12 text-gray-400"
