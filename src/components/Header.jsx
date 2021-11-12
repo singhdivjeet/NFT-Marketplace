@@ -20,7 +20,7 @@ function Header() {
 							Products
 						</a>
 						<a
-							href="#"
+							href="/contact"
 							class="py-2 px-6 flex rounded-lg hover:bg-pink-600 hover:text-white"
 						>
 							Contact

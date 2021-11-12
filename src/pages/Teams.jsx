@@ -9,7 +9,7 @@ function Teams() {
 				Professional team
 			</p>
 			<p class="text-center mb-12 text-xl font-normal text-gray-500 dark:text-gray-200">
-				Meat the best team in wolrd
+				Meat the best team in the world
 			</p>
 			<div class="flex items-center flex-col md:flex-row justify evenly">
 				<div class="p-4">
@@ -23,11 +23,11 @@ function Teams() {
 						</a>
 					</div>
 					<div class="text-center">
-						<p class="text-2xl text-gray-800 dark:text-white">Aabhas Tonwer</p>
-						<p class="text-xl text-gray-500 dark:text-gray-200 font-light">
+						<p class="text-xl text-gray-800 dark:text-white">Aabhas Tonwer</p>
+						<p class="text-l text-gray-500 dark:text-gray-200 font-light">
 							Graduate Student
 						</p>
-						<p class="text-md text-gray-500 dark:text-gray-400 max-w-xs py-4 font-light">
+						<p class="text-sm text-gray-500 dark:text-gray-400 max-w-xs py-4 font-light">
 							Patrick Sébastien, born November 14, 1953 in Brive-la-Gaillarde,
 							is an imitator.
 						</p>
@@ -70,13 +70,11 @@ function Teams() {
 						</a>
 					</div>
 					<div class="text-center">
-						<p class="text-2xl text-gray-800 dark:text-white">
-							Anurag Dhasmana
-						</p>
-						<p class="text-xl text-gray-500 dark:text-gray-200 font-light">
+						<p class="text-xl text-gray-800 dark:text-white">Anurag Dhasmana</p>
+						<p class="text-l text-gray-500 dark:text-gray-200 font-light">
 							Graduate Student
 						</p>
-						<p class="text-md text-gray-500 dark:text-gray-400 max-w-xs py-4 font-light">
+						<p class="text-sm text-gray-500 dark:text-gray-400 max-w-xs py-4 font-light">
 							Patrick Sébastien, born November 14, 1953 in Brive-la-Gaillarde,
 							is an imitator.
 						</p>
@@ -119,11 +117,11 @@ function Teams() {
 						</a>
 					</div>
 					<div class="text-center">
-						<p class="text-2xl text-gray-800 dark:text-white">Arindaam Roy</p>
-						<p class="text-xl text-gray-500 dark:text-gray-200 font-light">
+						<p class="text-xl text-gray-800 dark:text-white">Arindaam Roy</p>
+						<p class="text-l text-gray-500 dark:text-gray-200 font-light">
 							Graduate Student
 						</p>
-						<p class="text-md text-gray-500 dark:text-gray-400 max-w-xs py-4 font-light">
+						<p class="text-sm text-gray-500 dark:text-gray-400 max-w-xs py-4 font-light">
 							Patrick Sébastien, born November 14, 1953 in Brive-la-Gaillarde,
 							is an imitator.
 						</p>
@@ -166,13 +164,13 @@ function Teams() {
 						</a>
 					</div>
 					<div class="text-center">
-						<p class="text-2xl text-gray-800 dark:text-white">
+						<p class="text-xl text-gray-800 dark:text-white">
 							Divjeet Singh Jas
 						</p>
-						<p class="text-xl text-gray-500 dark:text-gray-200 font-light">
+						<p class="text-l text-gray-500 dark:text-gray-200 font-light">
 							Graduate Student
 						</p>
-						<p class="text-md text-gray-500 dark:text-gray-400 max-w-xs py-4 font-light">
+						<p class="text-sm text-gray-500 dark:text-gray-400 max-w-xs py-4 font-light">
 							Patrick Sébastien, born November 14, 1953 in Brive-la-Gaillarde,
 							is an imitator.
 						</p>
@@ -215,11 +213,11 @@ function Teams() {
 						</a>
 					</div>
 					<div class="text-center">
-						<p class="text-2xl text-gray-800 dark:text-white">Rachit Dhamija</p>
-						<p class="text-xl text-gray-500 dark:text-gray-200 font-light">
+						<p class="text-xl text-gray-800 dark:text-white">Rachit Dhamija</p>
+						<p class="text-l text-gray-500 dark:text-gray-200 font-light">
 							Graduate Student
 						</p>
-						<p class="text-md text-gray-500 dark:text-gray-400 max-w-xs py-4 font-light">
+						<p class="text-sm text-gray-500 dark:text-gray-400 max-w-xs py-4 font-light">
 							Patrick Sébastien, born November 14, 1953 in Brive-la-Gaillarde,
 							is an imitator.
 						</p>

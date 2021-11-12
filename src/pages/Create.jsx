@@ -1,7 +1,7 @@
 export default function Create() {
 	return (
 		<>
-			<div className="p-8">
+			<div className="p-8 mb-10">
 				<div className="md:grid md:grid-cols-3 md:gap-6">
 					<div className="md:col-span-1">
 						<div className="px-4 sm:px-0">
@@ -30,7 +30,7 @@ export default function Create() {
 												name="first-name"
 												id="first-name"
 												autoComplete="given-name"
-												className="mt-1 h-8 focus:ring-indigo-500 w-3/4 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
+												className="mt-1 h-8 p-2 focus:ring-indigo-500 w-3/4 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
 											/>
 										</div>
 
@@ -46,7 +46,24 @@ export default function Create() {
 												name="last-name"
 												id="last-name"
 												autoComplete="family-name"
-												className="mt-1 w-3/4 h-8 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
+												className="mt-1 w-3/4 h-8 p-2 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
+											/>
+										</div>
+									</div>
+									<div className="flex">
+										<div className="items-center text-left w-full flex sm:p-6">
+											<label
+												htmlFor="first-name"
+												className="block w-1/4 text-sm font-medium text-gray-700"
+											>
+												Product name
+											</label>
+											<input
+												type="text"
+												name="first-name"
+												id="first-name"
+												autoComplete="given-name"
+												className="mt-1 h-8 p-2 focus:ring-indigo-500 w-3/4 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
 											/>
 										</div>
 									</div>
@@ -62,8 +79,8 @@ export default function Create() {
 												id="about"
 												name="about"
 												rows={3}
-												className="shadow-sm focus:ring-pink-500 focus:border-pink-500 mt-1 block w-full sm:text-sm border border-gray-300 rounded-md"
-												placeholder=" Rare 80's Superhero"
+												className="shadow-sm focus:ring-pink-500 p-3 focus:border-pink-500 mt-1 block w-full sm:text-sm border border-gray-300 rounded-md"
+												placeholder="Rare 80's Superhero"
 												defaultValue={""}
 											/>
 										</div>
