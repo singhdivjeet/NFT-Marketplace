@@ -8,6 +8,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Error404 from "./pages/Error404";
 import Create from "./pages/Create";
 import Teams from "./pages/Teams";
+import ViewProduct from "./pages/ViewProduct";
 import Contact from "./pages/Contact";
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
 					<Route path="/products" element={<Products />} />
 					<Route path="/create" element={<Create />} />
 					<Route path="/teams" element={<Teams />} />
+					<Route path="/viewproduct" element={<ViewProduct />} />
 					<Route path="/contact" element={<Contact />} />
 					<Route path="*" element={<Error404 />} />
 				</Routes>

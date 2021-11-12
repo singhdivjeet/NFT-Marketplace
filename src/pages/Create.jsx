@@ -1,7 +1,8 @@
+import cat from "../images/cat.png";
 export default function Create() {
 	return (
 		<>
-			<div className="p-8 mb-10">
+			<div className="p-8 mb-10 z-10 h-screen">
 				<div className="md:grid md:grid-cols-3 md:gap-6">
 					<div className="md:col-span-1">
 						<div className="px-4 sm:px-0">
@@ -11,6 +12,9 @@ export default function Create() {
 							<p className="mt-1 text-sm text-gray-600">
 								Fill the required information and enter the world of NFTs
 							</p>
+						</div>
+						<div className="w-full flex justify-center">
+							<img src={cat} />
 						</div>
 					</div>
 					<div className="mt-5 md:mt-0 md:col-span-2">
