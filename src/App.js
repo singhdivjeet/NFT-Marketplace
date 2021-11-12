@@ -6,6 +6,7 @@ import Home from "./pages/Home";
 import Products from "./pages/Products";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Error404 from "./pages/Error404";
+import Create from "./pages/Create";
 
 function App() {
 	return (
@@ -15,7 +16,7 @@ function App() {
 				<Routes>
 					<Route path="/" element={<Home />} />
 					<Route path="/products" element={<Products />} />
-					{/* <Route exact path="/login" element={<Login />} /> */}
+					<Route path="/create" element={<Create />} />
 
 					<Route path="*" element={<Error404 />} />
 				</Routes>

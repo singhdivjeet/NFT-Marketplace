@@ -19,13 +19,13 @@ function Home() {
 						</p>
 						<div class="flex mt-8">
 							<a
-								href="#"
+								href="/products"
 								class="uppercase py-2 px-6 rounded-lg bg-pink-500 border-2 border-transparent text-white text-md mr-4 hover:bg-pink-600"
 							>
 								Explore
 							</a>
 							<a
-								href="#"
+								href="/create"
 								class="uppercase py-2 px-6 rounded-lg bg-transparent border-2 border-pink-500 text-pink-500 dark:text-white hover:bg-pink-600 hover:text-white text-md"
 							>
 								Create
@@ -33,7 +33,7 @@ function Home() {
 						</div>
 					</div>
 					<div class="hidden sm:block sm:w-2/3 lg:w-4/5 relative">
-						<img src={banner} class=" md:max-w-sm m-auto" />
+						<img src={banner} class=" md:max-w-lg m-auto" />
 					</div>
 				</div>
 			</div>
