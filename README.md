@@ -15,7 +15,7 @@ This is an example of how to list things you need to use the software and how to
 
 ### Installation
 1. Clone the repo
-`git clone https://github.com/singhdivjeet/Pokedex.git`
+`git clone https://github.com/singhdivjeet/NFT-Marketplace`
 2. Install NPM packages
 `npm install npm@latest -g`
 4. Run the local development server
