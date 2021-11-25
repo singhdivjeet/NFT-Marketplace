@@ -1,5 +1,22 @@
+import { React, useState, useEffect } from "react";
 import cat from "../images/cat.png";
+
 export default function Create() {
+	const [body, setBody] = useState({});
+	function onHandle({ target }) {
+		setBody((prev) => ({ ...prev, [target.name]: target.value }));
+	}
+
+	console.log(body);
+	async function onSubmit() {
+		// let response =
+		await fetch("...url...", { method: "POST", params: body })
+			.then((res) => {})
+			.catch((err) => console.log(err)); //fetch or axios
+
+		console.log(body);
+	}
+
 	return (
 		<>
 			<div className="p-8 mb-10 z-10 h-screen">
@@ -18,7 +35,7 @@ export default function Create() {
 						</div>
 					</div>
 					<div className="mt-5 md:mt-0 md:col-span-2">
-						<form action="#" method="POST">
+						<div>
 							<div className="bg-gray-50 sm:rounded-md sm:overflow-hidden">
 								<div className="px-4 py-5  space-y-6 sm:p-6">
 									<div className="flex">
@@ -33,6 +50,7 @@ export default function Create() {
 												type="text"
 												name="first-name"
 												id="first-name"
+												onChange={onHandle}
 												autoComplete="given-name"
 												className="mt-1 h-8 p-2 focus:ring-indigo-500 w-3/4 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
 											/>
@@ -49,6 +67,7 @@ export default function Create() {
 												type="text"
 												name="last-name"
 												id="last-name"
+												onChange={onHandle}
 												autoComplete="family-name"
 												className="mt-1 w-3/4 h-8 p-2 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
 											/>
@@ -65,6 +84,7 @@ export default function Create() {
 											<input
 												type="text"
 												name="first-name"
+												onChange={onHandle}
 												id="first-name"
 												autoComplete="given-name"
 												className="mt-1 h-8 p-2 focus:ring-indigo-500 w-3/4 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
@@ -82,6 +102,7 @@ export default function Create() {
 											<textarea
 												id="about"
 												name="about"
+												onChange={onHandle}
 												rows={3}
 												className="shadow-sm focus:ring-pink-500 p-3 focus:border-pink-500 mt-1 block w-full sm:text-sm border border-gray-300 rounded-md"
 												placeholder="Rare 80's Superhero"
@@ -123,6 +144,7 @@ export default function Create() {
 															id="file-upload"
 															name="file-upload"
 															type="file"
+															// onChange={onHandle}
 															className="sr-only"
 														/>
 													</label>
@@ -138,13 +160,14 @@ export default function Create() {
 								<div className="px-4 py-3 bg-gray-50 text-right sm:px-6">
 									<button
 										type="submit"
+										onClick={onSubmit}
 										className="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
 									>
 										Save
 									</button>
 								</div>
 							</div>
-						</form>
+						</div>
 					</div>
 				</div>
 			</div>

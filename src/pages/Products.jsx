@@ -42,6 +42,18 @@ const products = [
 // const breadcrumbs = [{ id: 1, name: "Home", href: "/" }];
 
 export default function Example() {
+	async function fetchData() {
+		// let response =
+		await fetch("...url...", { method: "GET" })
+			.then((res) => {
+				// let products = res.data;
+				// return products;
+			})
+			.catch((err) => console.log(err)); //fetch or axios
+	}
+
+	// const products = fetchData();
+
 	return (
 		<div className="bg-white">
 			<div className="max-w-2xl mx-auto py-8 sm:py-12 sm:px-6 lg:max-w-7xl lg:px-4">
