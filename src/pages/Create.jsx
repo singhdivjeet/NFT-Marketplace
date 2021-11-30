@@ -4,18 +4,66 @@ import cat from "../images/cat.png";
 export default function Create() {
 	const [body, setBody] = useState({});
 	const [image, setImage] = useState(null);
+	const [base64, setBase64] = useState("");
+
 	console.log("IN CREATE");
 	//data
 	function onHandle({ target }) {
 		setBody((prev) => ({ ...prev, [target.name]: target.value }));
 	}
 	//image
-	function handleImage(e) {
-		setImage(e.target.files[0]);
+	function getBase64(file) {
+		return new Promise((resolve) => {
+			let fileInfo;
+			let baseURL = "";
+			// Make new FileReader
+			let reader = new FileReader();
+
+			// Convert the file to base64 text
+			reader.readAsDataURL(file);
+
+			// on reader load somthing...
+			reader.onload = () => {
+				// Make a fileInfo Object
+				console.log("Called", reader);
+				baseURL = reader.result;
+				console.log(baseURL);
+				resolve(baseURL);
+			};
+			console.log(fileInfo);
+		});
 	}
 
-	console.log(body);
-	console.log(image);
+	function handleImage(e) {
+		// setImage(e.target.files[0]);
+		// console.log(e.target.files[0]);
+		let file;
+
+		file = e.target.files[0];
+
+		getBase64(file)
+			.then((result) => {
+				file["base64"] = result;
+				// console.log("File Is", file);
+
+				setBase64(result);
+				// this.setState({
+				//   base64URL: result,
+				//   file
+				// });
+			})
+			.catch((err) => {
+				console.log(err);
+			});
+		setImage(file);
+
+		// this.setState({
+		// 	file: e.target.files[0],
+		// });
+	}
+	// console.log("base64", base64);
+	// console.log(body);
+	// console.log(image);
 
 	//submiting
 	async function onSubmit() {
@@ -24,13 +72,13 @@ export default function Create() {
 		formData.append("lastname", body.lastname);
 		formData.append("productname", body.productname);
 		formData.append("about", body.about);
-		formData.append("image", image);
-		console.log("HI", formData);
+		formData.append("image", base64);
+		console.log("HI", formData.values());
 
-		//To Check FormData
-		// for (var value of formData.values()) {
-		// 	console.log(value);
-		// }
+		// To Check FormData
+		for (var value of formData.values()) {
+			console.log(value);
+		}
 
 		// let response =
 		await fetch("...url...", { method: "POST", params: formData })
