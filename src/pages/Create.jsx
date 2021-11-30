@@ -3,18 +3,41 @@ import cat from "../images/cat.png";
 
 export default function Create() {
 	const [body, setBody] = useState({});
+	const [image, setImage] = useState(null);
+	console.log("IN CREATE");
+	//data
 	function onHandle({ target }) {
 		setBody((prev) => ({ ...prev, [target.name]: target.value }));
 	}
+	//image
+	function handleImage(e) {
+		setImage(e.target.files[0]);
+	}
 
 	console.log(body);
-	async function onSubmit() {
-		// let response =
-		await fetch("...url...", { method: "POST", params: body })
-			.then((res) => {})
-			.catch((err) => console.log(err)); //fetch or axios
+	console.log(image);
 
-		console.log(body);
+	//submiting
+	async function onSubmit() {
+		const formData = new FormData();
+		formData.append("firstname", body.firstname);
+		formData.append("lastname", body.lastname);
+		formData.append("productname", body.productname);
+		formData.append("about", body.about);
+		formData.append("image", image);
+		console.log("HI", formData);
+
+		//To Check FormData
+		// for (var value of formData.values()) {
+		// 	console.log(value);
+		// }
+
+		// let response =
+		await fetch("...url...", { method: "POST", params: formData })
+			.then((res) => {
+				alert("NFT Minted Successfully");
+			})
+			.catch((err) => console.log(err)); //fetch or axios
 	}
 
 	return (
@@ -48,7 +71,7 @@ export default function Create() {
 											</label>
 											<input
 												type="text"
-												name="first-name"
+												name="firstname"
 												id="first-name"
 												onChange={onHandle}
 												autoComplete="given-name"
@@ -65,7 +88,7 @@ export default function Create() {
 											</label>
 											<input
 												type="text"
-												name="last-name"
+												name="lastname"
 												id="last-name"
 												onChange={onHandle}
 												autoComplete="family-name"
@@ -76,17 +99,16 @@ export default function Create() {
 									<div className="flex">
 										<div className="items-center text-left w-full flex sm:p-6">
 											<label
-												htmlFor="first-name"
+												htmlFor="product-name"
 												className="block w-1/4 text-sm font-medium text-gray-700"
 											>
 												Product name
 											</label>
 											<input
 												type="text"
-												name="first-name"
+												name="productname"
 												onChange={onHandle}
-												id="first-name"
-												autoComplete="given-name"
+												id="product-name"
 												className="mt-1 h-8 p-2 focus:ring-indigo-500 w-3/4 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
 											/>
 										</div>
@@ -144,6 +166,7 @@ export default function Create() {
 															id="file-upload"
 															name="file-upload"
 															type="file"
+															onChange={handleImage}
 															// onChange={onHandle}
 															className="sr-only"
 														/>
