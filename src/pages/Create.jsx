@@ -81,7 +81,7 @@ export default function Create() {
 		}
 
 		// let response =
-		await fetch("...url...", { method: "POST", params: formData })
+		await fetch("/mint", { method: "POST", body: formData })
 			.then((res) => {
 				alert("NFT Minted Successfully");
 			})
