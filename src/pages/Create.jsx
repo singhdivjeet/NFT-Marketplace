@@ -71,6 +71,7 @@ export default function Create() {
 		formData.append("firstname", body.firstname);
 		formData.append("lastname", body.lastname);
 		formData.append("productname", body.productname);
+		formData.append("price", body.price);
 		formData.append("about", body.about);
 		formData.append("image", base64);
 		console.log("HI", formData.values());
@@ -91,7 +92,7 @@ export default function Create() {
 	return (
 		<>
 			<div className="p-8 mb-10 z-10 h-screen">
-				<div className="md:grid md:grid-cols-3 md:gap-6">
+				<div className="md:grid md:grid-cols-3 md:gap-6 mb-12">
 					<div className="md:col-span-1">
 						<div className="px-4 sm:px-0">
 							<h3 className="text-lg font-medium leading-6 text-gray-900">
@@ -113,7 +114,7 @@ export default function Create() {
 										<div className="w-1/2 items-center flex sm:p-6">
 											<label
 												htmlFor="first-name"
-												className="block w-1/4 text-sm font-medium text-gray-700"
+												className="block w-1/2 text-sm font-medium text-gray-700"
 											>
 												First name
 											</label>
@@ -130,7 +131,7 @@ export default function Create() {
 										<div className="w-1/2  items-center  flex sm:p-6">
 											<label
 												htmlFor="last-name"
-												className="block text-sm w-1/4 font-medium text-gray-700"
+												className="block text-sm w-1/2 font-medium text-gray-700"
 											>
 												Last name
 											</label>
@@ -145,6 +146,41 @@ export default function Create() {
 										</div>
 									</div>
 									<div className="flex">
+										<div className="w-1/2 items-center flex sm:p-6">
+											<label
+												htmlFor="product-name"
+												className="block w-1/2 text-sm font-medium text-gray-700"
+											>
+												Product name
+											</label>
+											<input
+												type="text"
+												name="productname"
+												id="product-name"
+												onChange={onHandle}
+												autoComplete="given-name"
+												className="mt-1 h-8 p-2 focus:ring-indigo-500 w-3/4 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
+											/>
+										</div>
+
+										<div className="w-1/2  items-center  flex sm:p-6">
+											<label
+												htmlFor="price"
+												className="block text-sm w-1/4 font-medium text-gray-700"
+											>
+												Price
+											</label>
+											<input
+												type="text"
+												name="price"
+												id="price"
+												onChange={onHandle}
+												autoComplete="family-name"
+												className="mt-1 w-3/4 h-8 p-2 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
+											/>
+										</div>
+									</div>
+									{/* <div className="flex">
 										<div className="items-center text-left w-full flex sm:p-6">
 											<label
 												htmlFor="product-name"
@@ -160,7 +196,7 @@ export default function Create() {
 												className="mt-1 h-8 p-2 focus:ring-indigo-500 w-3/4 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
 											/>
 										</div>
-									</div>
+									</div> */}
 									<div>
 										<label
 											htmlFor="about"
