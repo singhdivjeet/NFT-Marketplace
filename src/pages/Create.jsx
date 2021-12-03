@@ -1,5 +1,8 @@
 import { React, useState, useEffect } from "react";
 import cat from "../images/cat.png";
+import Swal from "sweetalert2";
+import withReactContent from "sweetalert2-react-content";
+const MySwal = withReactContent(Swal);
 
 export default function Create() {
 	const [body, setBody] = useState({});
@@ -85,9 +88,11 @@ export default function Create() {
 		await fetch("/mint", { method: "POST", body: formData })
 			.then((res) => {
 				if (res.status != 200) {
-					alert("Scam alert! NFT already minted!");
+					// alert("Scam alert! NFT already minted!");
+					MySwal.fire(<p>Scam alert! NFT already minted!</p>);
 				} else {
-					alert("NFT Minted Successfully");
+					// alert("NFT Minted Successfully");
+					MySwal.fire(<p>NFT Minted Successfully!</p>);
 				}
 			})
 			.catch((err) => console.log(err)); //fetch or axios
