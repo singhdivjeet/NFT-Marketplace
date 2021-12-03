@@ -84,10 +84,9 @@ export default function Create() {
 		// let response =
 		await fetch("/mint", { method: "POST", body: formData })
 			.then((res) => {
-				if(res.status != 200) {
-					alert("Scan alert! NFT already minted!");
-				}
-				else {
+				if (res.status != 200) {
+					alert("Scam alert! NFT already minted!");
+				} else {
 					alert("NFT Minted Successfully");
 				}
 			})
