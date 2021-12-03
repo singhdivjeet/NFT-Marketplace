@@ -84,7 +84,12 @@ export default function Create() {
 		// let response =
 		await fetch("/mint", { method: "POST", body: formData })
 			.then((res) => {
-				alert("NFT Minted Successfully");
+				if(res.status != 200) {
+					alert("Scan alert! NFT already minted!");
+				}
+				else {
+					alert("NFT Minted Successfully");
+				}
 			})
 			.catch((err) => console.log(err)); //fetch or axios
 	}
